@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Mr. B</title>
+    <meta
+      name="description"
+      content="Här finner du den samlade portfolion av arbeten som skrivits av Mr.B. under hans studietid i Borlänge."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Min portfolio</h1>
+      <p class="header__intro">
+        Hej! Här presenterar jag mig och mina projekt.
+      </p>
+      <nav class="nav" aria-label="Huvudnavigering">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--ommig" href="#om-mig">Om mig</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--projekt" href="projekt.html"
+              >Projekt</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--kontakt" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="om-mig">
+        <h2 class="main__h2">Om mig</h2>
+        <ul>
+          <li>
+            Jag (Mr.B), lär mig att skapa webbsidor med HTML och CSS. Här kan
+            jag berätta lite om mig själv eller använda en påhittad
+            presentation.
+          </li>
+          <li>
+            Mr.B går för närvarande första året på systemvetenskapliga
+            programmet hos Högskolan Dalarna i Borlänge.
+          </li>
+          <li>
+            Mr.B Har för tillfället inget mer att tillägga i ärendet, återkom
+            gärna efter en viss tid så ska du se att det finns mer material på
+            sidan då!
+          </li>
+        </ul>
+      </section>
+
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action=""></form>
+        <p>
+          För att få mer information om mig och mina tidigare arbeten, vänligen
+          fyll i nedanstående så återkommer jag inom kort.
+        </p>
+        <form class="contact-form" action="/tack.php" method="post">
+          <fieldset>
+            <legend>Fyll i nedanstående</legend>
+
+            <fieldset>
+              <label class="contact-form__label" for="contact-name"
+                >Namn:</label
+              >
+              <input
+                class="contact-form__input"
+                type="text"
+                id="contact-name"
+                name="name"
+                autocomplete="name"
+              />
+
+              <label class="contact-form__label" for="contact-email"
+                >E-postadress:</label
+              >
+              <input
+                class="contact-form__input"
+                type="email"
+                id="contact-email"
+                name="email"
+                autocomplete="email"
+              />
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                Välj inom vilket/vilka kodspråk du vill få fler projekt-exempel
+                från:
+              </legend>
+              <label class="contact-form__label" for="contact-checkbox"
+                >java-script
+              </label>
+              <input
+                class="contact-form__checkbox"
+                type="checkbox"
+                id="contact-checkbox__js"
+                name="checkbox"
+              />
+              <label class="contact-form__label" for="contact-checkbox">
+                Python
+              </label>
+              <input
+                class="contact-form__checkbox"
+                type="checkbox"
+                id="contact-checkbox__py"
+                name="checkbox"
+              />
+              <label class="contact-form__label" for="contact-checkbox"
+                >php
+              </label>
+              <input
+                class="contact-form__checkbox"
+                type="checkbox"
+                id="contact-checkbox__php"
+                name="checkbox"
+              />
+            </fieldset>
+
+            <fieldset>
+              <legend>Beskriv vad du mer skulle vilja veta:</legend>
+              <label class="contact-form__label" for="contact-info"> </label>
+              <textarea
+                name="Kundinformation"
+                rows="5"
+                cols="50"
+                class="contact-form__input"
+                id="contact-info"
+                name="info"
+              >
+              </textarea>
+            </fieldset>
+          </fieldset>
+          <button class="contact-form__submit" type="submit">Skicka</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer">Min portfolio – en övning i HTML och CSS.</p>
+    </footer>
+  </body>
+</html>
+
