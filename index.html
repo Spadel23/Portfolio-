@@ -54,8 +54,113 @@
           </li>
         </ul>
       </section>
-
+       <!-- Kontaktaformulär -->
       <section id="kontakt">
+<<<<<<< HEAD
+
+        <h2 class="contact__title">Kontakta</h2>
+
+         <p class="contact__text">
+          för att få mer information om mig och mina tidigare arbeten, fyll i formuläret nedan.
+          </p>
+
+          <!--
+
+          ACTION: submit-contact
+          DATA: Kontaktuppgifter och meddelande
+          Target: contact-resultat
+
+          Javascript-krokarna förbereder formuläret för framtida interaktion.
+          -->
+
+          <form class="contact__form"
+          action="tack.php"
+          method="post">
+
+          <!--Namn-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="name">
+              Namn
+            </label>
+
+            <input class="contact__input"
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required>
+
+          </div>
+
+          <!--E-post-->
+          <div class="contact__field">
+            
+            <label class="contact__label" for="email">
+              E-postadress
+            </label>
+
+            <input class="contact__input"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+
+          </div>
+
+          <!--Ämne-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="subject">
+              Ämne
+            </label>
+
+            <input class="contact__input"
+            type="text"
+            id="subject"
+            name="subject"
+            required>
+
+            <optionvalue="">välj ämne</option>
+          <option value="arbete">Tidigare arbeten</option>
+          <option value="fråga">Allmän fråga </option>
+
+          </select>
+      
+         </div>
+
+          <!--Meddelande-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="message">
+              Meddelande
+            </label>
+
+            <textarea class="contact__input"
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+
+          </div>
+          
+          <!--Skicka-knapp med JS-krok-->
+          <button class="contact__button" 
+          type="submit">
+          skicka
+          </button>
+
+
+          <!--Här kan Javascript visa återkoppling-->
+          <p class="contact__result"
+          data-js-target="polite"></p>
+
+          </form>
+
+      </section>
+    
+=======
         <h2>Kontakt</h2>
         <form action=""></form>
         <p>
@@ -63,11 +168,17 @@
           fyll i nedanstående så återkommer jag inom kort.
         </p>
        
+>>>>>>> a431d26360425118fed6a79499e7782c394c6b70
     </main>
 
+
+    <!--sidfot-->
     <footer class="footer">
-      <p id="footer">Min portfolio – en övning i HTML och CSS.</p>
+
+    <p class="footer__text">
+      min portfolio - en övning i HTML och CSS.
+    </p>
+
     </footer>
   </body>
 </html>
-
