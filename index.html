@@ -54,98 +54,121 @@
           </li>
         </ul>
       </section>
-
+       <!-- Kontaktaformulär -->
       <section id="kontakt">
-        <h2>Kontakt</h2>
-        <form action=""></form>
-        <p>
-          För att få mer information om mig och mina tidigare arbeten, vänligen
-          fyll i nedanstående så återkommer jag inom kort.
-        </p>
-        <form class="contact-form" action="/tack.php" method="post">
-          <fieldset>
-            <legend>Fyll i nedanstående</legend>
 
-            <fieldset>
-              <label class="contact-form__label" for="contact-name"
-                >Namn:</label
-              >
-              <input
-                class="contact-form__input"
-                type="text"
-                id="contact-name"
-                name="name"
-                autocomplete="name"
-              />
+        <h2 class="contact__title">Kontakta</h2>
 
-              <label class="contact-form__label" for="contact-email"
-                >E-postadress:</label
-              >
-              <input
-                class="contact-form__input"
-                type="email"
-                id="contact-email"
-                name="email"
-                autocomplete="email"
-              />
-            </fieldset>
+         <p class="contact__text">
+          för att få mer information om mig och mina tidigare arbeten, fyll i formuläret nedan.
+          </p>
 
-            <fieldset>
-              <legend>
-                Välj inom vilket/vilka kodspråk du vill få fler projekt-exempel
-                från:
-              </legend>
-              <label class="contact-form__label" for="contact-checkbox"
-                >java-script
-              </label>
-              <input
-                class="contact-form__checkbox"
-                type="checkbox"
-                id="contact-checkbox__js"
-                name="checkbox"
-              />
-              <label class="contact-form__label" for="contact-checkbox">
-                Python
-              </label>
-              <input
-                class="contact-form__checkbox"
-                type="checkbox"
-                id="contact-checkbox__py"
-                name="checkbox"
-              />
-              <label class="contact-form__label" for="contact-checkbox"
-                >php
-              </label>
-              <input
-                class="contact-form__checkbox"
-                type="checkbox"
-                id="contact-checkbox__php"
-                name="checkbox"
-              />
-            </fieldset>
+          <!--
 
-            <fieldset>
-              <legend>Beskriv vad du mer skulle vilja veta:</legend>
-              <label class="contact-form__label" for="contact-info"> </label>
-              <textarea
-                name="Kundinformation"
-                rows="5"
-                cols="50"
-                class="contact-form__input"
-                id="contact-info"
-                name="info"
-              >
-              </textarea>
-            </fieldset>
-          </fieldset>
-          <button class="contact-form__submit" type="submit">Skicka</button>
-        </form>
+          ACTION: submit-contact
+          DATA: Kontaktuppgifter och meddelande
+          Target: contact-resultat
+
+          Javascript-krokarna förbereder formuläret för framtida interaktion.
+          -->
+
+          <form class="contact__form"
+          action="tack.php"
+          method="post">
+
+          <!--Namn-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="name">
+              Namn
+            </label>
+
+            <input class="contact__input"
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            required>
+
+          </div>
+
+          <!--E-post-->
+          <div class="contact__field">
+            
+            <label class="contact__label" for="email">
+              E-postadress
+            </label>
+
+            <input class="contact__input"
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required>
+
+          </div>
+
+          <!--Ämne-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="subject">
+              Ämne
+            </label>
+
+            <input class="contact__input"
+            type="text"
+            id="subject"
+            name="subject"
+            required>
+
+            <optionvalue="">välj ämne</option>
+          <option value="arbete">Tidigare arbeten</option>
+          <option value="fråga">Allmän fråga </option>
+
+          </select>
+      
+         </div>
+
+          <!--Meddelande-->
+          <div class="contact__field">
+
+            <label class="contact__label" for="message">
+              Meddelande
+            </label>
+
+            <textarea class="contact__input"
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+
+          </div>
+          
+          <!--Skicka-knapp med JS-krok-->
+          <button class="contact__button" 
+          type="submit">
+          skicka
+          </button>
+
+
+          <!--Här kan Javascript visa återkoppling-->
+          <p class="contact__result"
+          data-js-target="polite"></p>
+
+          </form>
+
       </section>
+    
     </main>
 
+
+    <!--sidfot-->
     <footer class="footer">
-      <p id="footer">Min portfolio – en övning i HTML och CSS.</p>
+
+    <p class="footer__text">
+      min portfolio - en övning i HTML och CSS.
+    </p>
+
     </footer>
   </body>
 </html>
-
